@@ -26,6 +26,7 @@ import Cloud from "../assets/Cloud.svg"
 import Fcard1 from "../assets/fcard1.svg"
 import Fcard2 from "../assets/fcard2.svg"
 import logo from "../assets/logo.svg"
+import MoneyTransfer from "../assets/Money Transfer.svg"
 
 // List of features
 const features = [
@@ -40,7 +41,7 @@ const features = [
     title: "Dynamic Tax Rates",
     description:
       "A Dynamic E-commerce tax model is provided. Customers may request GST invoices for their billings.",
-    image: Conversation1,
+    image: MoneyTransfer,
     icon: Spark
   },
   {
@@ -154,13 +155,13 @@ const FeatureSection = () => {
     };
   }, []);
   return (
-    <div className="w-full md:pt-2 px-4 md:px-0 ">
+    <div className="w-full md:pt-2 px-4 md:px-0">
       {/* Header Section */}
       <div className="w-full pt-20 pb-10 md:pb-20 px-4">
         <div className="max-w-4xl mx-auto">
 
           <h2
-            className="text-5xl md:text-7xl font-regular text-center 
+            className="text-5xl md:text-8xl font-regular text-center 
                      bg-gradient-to-r from-white via-[#B4B2B2] to-[#B4B2B2] 
                      bg-clip-text text-transparent leading-tight mx-auto max-w-full break-words font-metal pb-2"
           >
@@ -175,7 +176,7 @@ const FeatureSection = () => {
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`relative flex flex-col md:flex-row items-center justify-between ${index % 2 === 1 ? "md:flex-row-reverse" : ""
+            className={`relative flex flex-col md:flex-row items-center px-4 justify-between ${index % 2 === 1 ? "md:flex-row-reverse" : ""
               } ${index === 0 ? 'pt-6 pb-4' : 'py-6'} md:py-10  w-full  overflow-hidden ${index === features.length - 1 ? 'rounded-b-3xl' : ''
               } bg-cover bg-center bg-no-repeat m-0 max-w-full min-h-[300px] md:min-h-[350px] md:h-[600px]`}
             style={{
@@ -240,14 +241,14 @@ const FeatureSection = () => {
       </div>
 
       {/* Available on All Devices Section */}
-      <div className="relative pt-16 pb-28 pl-4 pr-4 md:pl-15 md:pr-12 text-white overflow-hidden rounded-b-[120px] md:bg-[url('../src/assets/Storebg.svg')] md:bg-cover md:h-[500px] md:bg-center md:bg-no-repeat">
+      <div className="relative pt-16 pb-28 pl-4 pr-4 md:pl-15 md:pr-12 text-white overflow-hidden rounded-b-[120px] md:bg-[url('../src/assets/Storebg.svg')] md:bg-cover md:h-auto md:bg-center md:bg-no-repeat">
         {/* Background Image */}
 
 
-        <div className="md:container mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="md:container mx-auto relative z-10 justify-left">
+          <div className="flex flex-col md:flex-row items-center justify-between lg:pl-36">
             {/* Logos */}
-            <div className="flex gap-6 md:gap-12 justify-center align-center md:justify-start w-full md:w-auto md:pl-20">
+            <div className="flex gap-6 md:gap-12  align-center  justify-start ">
               <img src={Android} alt="Android" className="w-24 h-24 md:w-36 md:h-36 object-contain" />
               <img src={Apple} alt="Apple" className="w-20 h-20 md:w-32 md:h-32 object-contain" />
               <img src={Cloud} alt="Cloud" className="w-24 h-24 md:w-36 md:h-36 object-contain" />
@@ -263,12 +264,12 @@ const FeatureSection = () => {
                 Available on <span className="font-metal ml-2 whitespace-nowrap">All your Devices</span>
               </h2>
               <p className="text-[#C1C1C1] text-xl md:text-2xl max-w-2xl mx-auto md:mx-0 text-center md:text-left">
-                The question lies upon your mind that the way we provide application at low cost.
-                We developed using Google&apos;s <strong>Flutter</strong> Framework, which converts
-                single code into two platforms of different applications. So that we can provide both
-                Android APK and iOS App. We developed Website on Facebook&apos;s Framework{' '}
-                <strong>ReactJS</strong>.
+                We deliver applications that run seamlessly across all your devices at an affordable cost by using modern frameworks:{" "}
+                <strong>Flutter</strong> for <strong>Android and iOS</strong>, enabling a single codebase for both platforms, and{" "}
+                <strong>ReactJS with Node.js</strong> for powerful, scalable web solutions - ensuring high performance, faster updates,
+                and consistent user experiences everywhere.
               </p>
+
             </div>
           </div>
         </div>

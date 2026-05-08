@@ -7,13 +7,13 @@ import Why1 from '../assets/why1.svg';
 import Why2 from '../assets/why2.svg';
 import Why3 from '../assets/why3.svg';
 import Why4 from '../assets/why4.svg';
-
+import Arrow from '../assets/ArrowQR.svg';
 
 const features = [
   {
     icon: Why1,
-    title: "No Development Charges",
-    description: "We have worked over last two years to provide you an precise Ecommerce Application which covers all the modules with Analytic Reports."
+    title: "No Development Charges*",
+    description: "We have worked over the last two years to provide you with a precise eCommerce application that covers all modules and includes analytic reports. <br><br><span class='text-base text-gray-400'><strong>*</strong> Customization charges may apply.</span>"
   },
   {
     icon: Why2,
@@ -56,7 +56,7 @@ const About = () => {
                     {feature.title}
                   </h3>
                 </div>
-                <p className="text-[#C1C1C6] md:pl-4 text-xl md:text-2xl leading-relaxed text-center md:text-left">{feature.description}</p>
+                <p className="text-[#C1C1C6] md:pl-4 text-xl md:text-2xl leading-relaxed text-center md:text-left" dangerouslySetInnerHTML={{ __html: feature.description }}></p>
               </div>
             </div>
           ))}
@@ -79,14 +79,17 @@ const About = () => {
               You are most likely to build trust with people most easily, attract users and turn them into customers, 
               and encourage their contacts to do the same.
             </p>
-            <div className="relative pt-2">
-              <div className="flex flex-col items-center gap-6">
+            <div className="relative pt-2 ">
+              <div className="flex flex-row items-center gap-6 " >
                 <img 
                   src={QrCode} 
                   alt="QR Code" 
-                  className="w-32 h-32 flex-shrink-0"
+                  className="w-32 h-32 flex-shrink-0 mt-2"
                 />
-                <p className="text-white font-outfit font-light text-[20px] leading-[25px] text-center w-[318px] mt-2">
+                <div>
+                  <img src={Arrow} alt="Download Arrow" className="w-40 h-6 mt-8" />
+                </div>
+                <p className="text-white font-outfit font-light text-base md:text-lg leading-[25px] text-left w-[318px] ">
                   Scan QR code to test a sample<br />Application on your device
                 </p>
               </div>
